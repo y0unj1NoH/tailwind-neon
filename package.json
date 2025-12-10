@@ -1,0 +1,31 @@
+{
+  "name": "tailwind-neon",
+  "version": "0.1.0",
+  "description": "Neon glow utilities for Tailwind CSS v4 — Text Glow, Box Glow, Outline Glow, and Glow Animations.",
+  "main": "tailwind-neon.css",
+  "style": "tailwind-neon.css",
+  "files": [
+    "tailwind-neon.css",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "tailwind",
+    "tailwindcss",
+    "neon",
+    "glow",
+    "css",
+    "utilities",
+    "design"
+  ],
+  "author": "y0unj1NoH",
+  "license": "MIT",
+  "homepage": "https://github.com/y0unj1NoH/tailwind-neon#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/y0unj1NoH/tailwind-neon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/y0unj1NoH/tailwind-neon/issues"
+  }
+}

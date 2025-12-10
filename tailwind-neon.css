@@ -1,0 +1,153 @@
+@layer utilities {
+
+    /* ============================================================
+        TEXT GLOW
+    ============================================================ */
+    .text-glow {
+        --text-glow-color: currentColor;
+        text-shadow:
+            0 0 4px var(--text-glow-color),
+            0 0 8px var(--text-glow-color),
+            0 0 16px var(--text-glow-color);
+    }
+
+    .text-glow-xs {
+        --text-glow-color: currentColor;
+        text-shadow:
+            0 0 2px var(--text-glow-color),
+            0 0 4px var(--text-glow-color);
+    }
+
+    .text-glow-sm {
+        --text-glow-color: currentColor;
+        text-shadow:
+            0 0 3px var(--text-glow-color),
+            0 0 6px var(--text-glow-color),
+            0 0 12px var(--text-glow-color);
+    }
+
+    .text-glow-lg {
+        --text-glow-color: currentColor;
+        text-shadow:
+        0 0 6px var(--text-glow-color),
+        0 0 16px var(--text-glow-color),
+        0 0 36px var(--text-glow-color),
+        0 0 52px var(--text-glow-color);
+    }
+
+
+    /* ============================================================
+        BOX GLOW (Shadow Glow)
+    ============================================================ */
+    .glow {
+        --glow-color: currentColor;
+        box-shadow:
+            0 0 4px var(--glow-color),
+            0 0 12px var(--glow-color),
+            0 0 24px var(--glow-color);
+    }
+
+    .glow-xs {
+        --glow-color: currentColor;
+        box-shadow:
+            0 0 2px var(--glow-color),
+            0 0 6px var(--glow-color),
+            0 0 12px var(--glow-color);
+    }
+
+    .glow-sm {
+        --glow-color: currentColor;
+        box-shadow:
+            0 0 2px var(--glow-color),
+            0 0 7px var(--glow-color),
+            0 0 14px var(--glow-color);
+    }
+
+    .glow-lg {
+        --glow-color: currentColor;
+        box-shadow:
+            0 0 6px var(--glow-color),
+            0 0 18px var(--glow-color),
+            0 0 36px var(--glow-color);
+    }
+
+
+    /* ============================================================
+        OUTLINE GLOW
+    ============================================================ */
+    .glow-outline {
+        --outline-glow-color: currentColor;
+        outline: 2px solid var(--outline-glow-color);
+        outline-offset: 0;
+
+        box-shadow:
+            0 0 2px #fff,
+            inset 0 0 1px #fff,
+            0 0 6px var(--outline-glow-color),
+            0 0 12px var(--outline-glow-color),
+            0 0 18px var(--outline-glow-color);
+    }
+
+    .glow-outline-lg {
+        --outline-glow-color: currentColor;
+        outline: 2px solid var(--outline-glow-color);
+        outline-offset: 0;
+
+        box-shadow:
+            0 0 2px #fff,
+            inset 0 0 2px #fff,
+            0 0 8px var(--outline-glow-color),
+            0 0 20px var(--outline-glow-color),
+            0 0 40px var(--outline-glow-color);
+    }
+
+
+    /* ============================================================
+        ANIMATIONS
+    ============================================================ */
+    @keyframes glow-pulse {
+        0%, 100% {
+            filter: brightness(0.8);
+        }
+        50% {
+            filter: brightness(1.2);
+        }
+    }
+
+    .animate-glow-pulse {
+        animation: glow-pulse 1.5s ease-in-out infinite;
+    }
+
+
+    @keyframes glow-flicker {
+        0%, 100% { opacity: 1; }
+        92%      { opacity: 0.9; }
+        93%      { opacity: 0.2; }
+        94%      { opacity: 0.8; }
+        95%      { opacity: 0.1; }
+        96%      { opacity: 1; }
+        97%      { opacity: 0.4; }
+        98%      { opacity: 1; }
+    }
+
+    .animate-glow-flicker {
+        animation: glow-flicker 1.4s infinite;
+    }
+
+}
+
+/* ============================================================
+    CUSTOM COLOR GLOW — TAILWIND CYAN PALETTE
+============================================================ */
+
+.glow-cyan-50  { --glow-color: oklch(0.984 0.019 200.873); }
+.glow-cyan-100 { --glow-color: oklch(0.956 0.045 203.388); }
+.glow-cyan-200 { --glow-color: oklch(0.917 0.08  205.041); }
+.glow-cyan-300 { --glow-color: oklch(0.865 0.127 207.078); }
+.glow-cyan-400 { --glow-color: oklch(0.789 0.154 211.53); }
+.glow-cyan-500 { --glow-color: oklch(0.715 0.143 215.221); }
+.glow-cyan-600 { --glow-color: oklch(0.609 0.126 221.723); }
+.glow-cyan-700 { --glow-color: oklch(0.52  0.105 223.128); }
+.glow-cyan-800 { --glow-color: oklch(0.45  0.085 224.283); }
+.glow-cyan-900 { --glow-color: oklch(0.398 0.07  227.392); }
+.glow-cyan-950 { --glow-color: oklch(0.302 0.056 229.695); }
